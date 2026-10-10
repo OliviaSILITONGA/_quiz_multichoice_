@@ -6,9 +6,17 @@ import '../utils/responsive.dart';
 import '../widgets/page_container.dart';
 import '../widgets/primary_button.dart';
 import 'quiz_screen.dart';
+import 'review_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key});
+
+  void _openReview(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const ReviewScreen()),
+    );
+  }
 
   void _retry(BuildContext context) {
     final quiz = context.read<QuizProvider>();
@@ -105,8 +113,15 @@ class ResultScreen extends StatelessWidget {
             ),
             SizedBox(height: context.dp(0.06)),
             PrimaryButton(
+              label: 'Lihat Pembahasan',
+              icon: Icons.menu_book_rounded,
+              onPressed: () => _openReview(context),
+            ),
+            SizedBox(height: context.dp(0.03)),
+            PrimaryButton(
               label: 'Ulangi Kuis',
               icon: Icons.refresh_rounded,
+              isOutlined: true,
               onPressed: () => _retry(context),
             ),
             SizedBox(height: context.dp(0.03)),

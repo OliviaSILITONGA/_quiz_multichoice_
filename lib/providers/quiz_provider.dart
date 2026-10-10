@@ -14,6 +14,10 @@ class QuizProvider extends ChangeNotifier {
 
   // GETTER
   String get userName => _userName;
+  List<Question> get questions => _questions;
+
+  /// Jawaban user untuk soal ke-[questionIndex] (null jika belum dijawab).
+  int? answerAt(int questionIndex) => _answers[questionIndex];
   int get currentIndex => _currentIndex;
   int get totalQuestions => _questions.length;
   Question get currentQuestion => _questions[_currentIndex];
