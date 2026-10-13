@@ -8,7 +8,8 @@ import '../widgets/page_container.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/question_card.dart';
 import '../widgets/quiz_progress_bar.dart';
-import 'result_screen.dart';
+import '../widgets/adaptive_two_pane.dart';
+import '../screens/result_screen.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({super.key});
@@ -53,39 +54,47 @@ class QuizScreen extends StatelessWidget {
               total: quiz.totalQuestions,
             ),
             SizedBox(height: context.dp(0.05)),
-            QuestionCard(text: question.text),
-            SizedBox(height: context.dp(0.05)),
-            for (var i = 0; i < question.options.length; i++)
-              AnswerOption(
-                label: String.fromCharCode(65 + i),
-                text: question.options[i],
-                isSelected: quiz.selectedAnswer == i,
-                onTap: () => quiz.selectAnswer(i),
-              ),
-            SizedBox(height: context.dp(0.03)),
-            Row(
-              children: [
-                if (!quiz.isFirstQuestion) ...[
-                  Expanded(
-                    child: PrimaryButton(
-                      label: 'Sebelumnya',
-                      icon: Icons.arrow_back_rounded,
-                      isOutlined: true,
-                      onPressed: quiz.previous,
+            AdaptiveTwoPane(
+              first: QuestionCard(text: question.text),
+              second: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  for (var i = 0; i < question.options.length; i++)
+                    AnswerOption(
+                      label: String.fromCharCode(65 + i),
+                      text: question.options[i],
+                      isSelected: quiz.selectedAnswer == i,
+                      onTap: () => quiz.selectAnswer(i),
                     ),
+                  SizedBox(height: context.dp(0.03)),
+                  Row(
+                    children: [
+                      if (!quiz.isFirstQuestion) ...[
+                        Expanded(
+                          child: PrimaryButton(
+                            label: 'Sebelumnya',
+                            icon: Icons.arrow_back_rounded,
+                            isOutlined: true,
+                            onPressed: quiz.previous,
+                          ),
+                        ),
+                        SizedBox(width: context.dp(0.03)),
+                      ],
+                      Expanded(
+                        child: PrimaryButton(
+                          label: quiz.isLastQuestion
+                              ? 'Selesai'
+                              : 'Selanjutnya',
+                          icon: quiz.isLastQuestion
+                              ? Icons.flag_rounded
+                              : Icons.arrow_forward_rounded,
+                          onPressed: nextAction,
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(width: context.dp(0.03)),
                 ],
-                Expanded(
-                  child: PrimaryButton(
-                    label: quiz.isLastQuestion ? 'Selesai' : 'Selanjutnya',
-                    icon: quiz.isLastQuestion
-                        ? Icons.flag_rounded
-                        : Icons.arrow_forward_rounded,
-                    onPressed: nextAction,
-                  ),
-                ),
-              ],
+              ),
             ),
           ],
         ),

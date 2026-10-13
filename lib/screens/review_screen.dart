@@ -26,6 +26,7 @@ class ReviewScreen extends StatelessWidget {
       ),
       body: PageContainer(
         centerVertically: false,
+        maxWidth: 720,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
