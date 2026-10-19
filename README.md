@@ -24,6 +24,19 @@ serangkaian soal, lalu melihat skor akhir beserta pembahasan setiap soal.<br>
 - Tampilan responsive dan adaptive: ukuran elemen dinamis mengikuti layar layout berubah menjadi 2 kolom pada tablet, browser, atau layar lebar.<br>
 - Data soal bersifat lokal (dummy), tanpa database.<br>
 
+# Dokumentasi
+## Credit Assets
+| Aset | Sumber | Lisensi |
+|------|--------|---------|
+| Font Poppins | Indian Type Foundry via Google Fonts (https://fonts.google.com/specimen/Poppins) | SIL Open Font License 1.1 |
+| Material Icons | Google, bawaan Flutter (https://fonts.google.com/icons) | Apache License 2.0 |
+| Logo aplikasi (quiz_logo.png) | BUAT SENDIRI PAKAI CANVA (https://canva.link/x9ppimfw0r88dsx) | Elemen grafis yang digunakan berasal dari pustaka elemen Canva |
+| Package provider | https://pub.dev/packages/provider | MIT |
+| Flutter SDK | https://flutter.dev | BSD 3-Clause |
+
+## Screenshot Aplikasi
+Beranda
+
 ## Mockup / Prototype
 https://www.figma.com/design/P5WQzVBInqp6fSTMPTGhmE/FIGMA-FIGMA-BOY-~?node-id=3311-2&t=SiQOeJxsbCqZyVf9-1
 
