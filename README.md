@@ -35,7 +35,19 @@ serangkaian soal, lalu melihat skor akhir beserta pembahasan setiap soal.<br>
 | Flutter SDK | https://flutter.dev | BSD 3-Clause |
 
 ## Screenshot Aplikasi
-Beranda
+Beranda<br>
+docs/screenshots/home_mobile.jpg<br>
+Kuis<br>
+docs/screenshots/quiz1_mobile.jpg<br>
+docs/screenshots/quiz2_mobile.jpg<br>
+docs/screenshots/done_mobile.jpg<br>
+Hasil/Skor<br>
+docs/screenshots/result_mobile.jpg<br>
+Pembahasan
+docs/screenshots/review_true_mobile.jpg<br>
+docs/screenshots/review_false_mobile.jpg<br>
+Flash Screen<br>
+docs/screenshots/splash_mobile.jpg<br>
 
 ## Mockup / Prototype
 https://www.figma.com/design/P5WQzVBInqp6fSTMPTGhmE/FIGMA-FIGMA-BOY-~?node-id=3311-2&t=SiQOeJxsbCqZyVf9-1
