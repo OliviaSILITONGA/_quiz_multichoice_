@@ -59,8 +59,8 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Center(
           child: Image.asset(
-            'assets/images/quiz_logo.png',
-            height: context.dp(0.4),
+            'assets/images/logo.png',
+            height: context.dp(0.7),
             errorBuilder: (context, error, stackTrace) => Icon(
               Icons.quiz_rounded,
               size: context.dp(0.35),
