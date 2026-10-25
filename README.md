@@ -57,4 +57,5 @@ serangkaian soal, lalu melihat skor akhir beserta pembahasan setiap soal.<br>
 ## Mockup / Prototype
 https://www.figma.com/design/P5WQzVBInqp6fSTMPTGhmE/FIGMA-FIGMA-BOY-~?node-id=3311-2&t=SiQOeJxsbCqZyVf9-1
 
-
+## Link Presentasi
+https://youtu.be/f3MkUm5yZJI?si=lmhmcypXqYikFkDV
